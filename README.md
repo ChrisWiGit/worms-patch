@@ -42,3 +42,11 @@ original source and documentation.
 
 The action replay feature is not a true replay of the previous game state, but rather a
 replay of the input commands. The game does not restore the exact state of all objects, which can lead to inconsistencies. For example, worms that were alive before the replay may be dead afterward, or vice versa. This can be frustrating for players who expect the replay to accurately reflect the original game state. Disabling Automatic Action Replay helps to avoid these inconsistencies and ensures a more reliable gaming experience.
+
+## Cause
+
+The game saves the Automatic Action Replay setting in `WORMS.CFG` but also maintains a separate runtime flag that is initialized to ON. When the game starts, it reads the saved setting from the configuration file but then immediately overwrites it with the runtime flag, effectively ignoring the user's preference. This behavior results in the Automatic Action Replay being enabled regardless of the saved setting, leading to confusion and frustration for players who wish to disable this feature.
+
+## AI clause
+
+This repository contains content generated with the assistance of AI tools. While every effort has been made to ensure accuracy and clarity, users are advised to verify the information and use it at their own discretion. The maintainers do not assume responsibility for any errors or omissions in the AI-generated content.
