@@ -1,0 +1,12 @@
+# Proprietary game files and local outputs: never commit these.
+WRMS.EXE
+WORMS.CFG
+*.EXE
+*.CFG
+*.vcdiff
+*.replay-original.bak
+WRMS.EXE.orig
+*.patching.*
+local-patch/
+__pycache__/
+*.py[cod]
